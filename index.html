@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دروس اللغة العبرية للأطفال</title>
+  <style>
+    :root{
+      --bg:#f7f4ee;
+      --card:#ffffff;
+      --text:#1d2430;
+      --muted:#6f7680;
+      --accent:#243b53;
+      --accent2:#d7c7aa;
+      --border:#e7e1d8;
+      --shadow:0 22px 60px rgba(35,45,55,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(215,199,170,.32), transparent 34%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+    }
+    .page{width:min(1080px,92%);margin:auto;padding:42px 0 70px}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+    .intro{padding:20px 8px}
+    .tag{
+      display:inline-block;padding:8px 14px;border-radius:999px;
+      background:#efe8dc;color:#4e463b;font-size:14px;margin-bottom:18px
+    }
+    h1{margin:0 0 14px;font-size:clamp(34px,5vw,58px);line-height:1.12;letter-spacing:-.02em}
+    .lead{font-size:19px;line-height:1.8;color:var(--muted);max-width:590px}
+    .points{margin:25px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+    .points li{display:flex;gap:10px;align-items:flex-start;color:#39424c;font-size:16px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);margin-top:9px;flex:0 0 auto}
+    .card{
+      background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.8);
+      border-radius:26px;padding:28px;box-shadow:var(--shadow);backdrop-filter:blur(8px)
+    }
+    .card h2{margin:0 0 7px;font-size:26px}
+    .sub{margin:0 0 22px;color:var(--muted);line-height:1.6}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field.full{grid-column:1/-1}
+    label{font-size:14px;font-weight:600;color:#343b44}
+    input,select,textarea{
+      width:100%;border:1px solid var(--border);background:#fff;border-radius:13px;
+      padding:13px 14px;font:inherit;color:var(--text);outline:none;transition:.2s ease
+    }
+    input:focus,select:focus,textarea:focus{
+      border-color:#9e8f77;box-shadow:0 0 0 3px rgba(158,143,119,.12)
+    }
+    textarea{min-height:92px;resize:vertical}
+    button{
+      width:100%;border:0;border-radius:14px;padding:15px 18px;margin-top:18px;
+      background:var(--accent);color:#fff;font-size:16px;font-weight:700;cursor:pointer;transition:.2s ease
+    }
+    button:hover{transform:translateY(-1px);filter:brightness(1.05)}
+    button:disabled{opacity:.65;cursor:not-allowed;transform:none}
+    .privacy{font-size:12px;color:#8a8f96;text-align:center;margin-top:11px;line-height:1.6}
+    .error{
+      display:none;margin-top:14px;padding:12px 14px;border-radius:12px;
+      background:#fff0f0;color:#8a2f2f;font-size:14px;line-height:1.5
+    }
+    footer{text-align:center;color:#9a9da2;font-size:13px;margin-top:42px}
+    @media(max-width:820px){
+      .hero{grid-template-columns:1fr}
+      .intro{text-align:center}
+      .lead{margin-inline:auto}
+      .points{width:max-content;max-width:100%;margin:24px auto 0;text-align:right}
+    }
+    @media(max-width:560px){
+      .page{padding-top:24px}
+      .grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .card{padding:22px 18px;border-radius:20px}
+      .lead{font-size:17px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="intro">
+        <span class="tag">دروس فردية للأطفال والطلاب</span>
+        <h1>العبرية بثقة، خطوة بخطوة</h1>
+        <p class="lead">
+          دروس لغة عبرية بطريقة واضحة ومريحة، تساعد الطالب على تحسين المحادثة،
+          القراءة والفهم، وبناء الثقة باستخدام اللغة في المدرسة والحياة اليومية.
+        </p>
+        <ul class="points">
+          <li><span class="dot"></span><span>تركيز على المحادثة والقراءة والفهم.</span></li>
+          <li><span class="dot"></span><span>الدروس ملائمة لعمر ومستوى كل طالب.</span></li>
+          <li><span class="dot"></span><span>إمكانية التعلم أونلاين وبطريقة فردية.</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>اتركوا التفاصيل وسنتواصل معكم</h2>
+        <p class="sub">املؤوا النموذج القصير وسنتواصل معكم لمعرفة احتياجات الطالب وتنسيق الدرس المناسب.</p>
+
+        <form id="leadForm">
+          <div class="grid">
+            <div class="field">
+              <label for="parent_name">اسم ولي الأمر *</label>
+              <input id="parent_name" name="parent_name" type="text" required maxlength="120" placeholder="الاسم الكامل">
+            </div>
+            <div class="field">
+              <label for="phone">رقم الهاتف *</label>
+              <input id="phone" name="phone" type="tel" required maxlength="30" placeholder="05X-XXXXXXX">
+            </div>
+            <div class="field">
+              <label for="email">البريد الإلكتروني</label>
+              <input id="email" name="email" type="email" maxlength="200" placeholder="name@example.com">
+            </div>
+            <div class="field">
+              <label for="student_name">اسم الطالب/ة</label>
+              <input id="student_name" name="student_name" type="text" maxlength="120" placeholder="اسم الطالب/ة">
+            </div>
+            <div class="field">
+              <label for="grade">العمر / الصف</label>
+              <input id="grade" name="grade" type="text" maxlength="80" placeholder="مثال: الصف السابع">
+            </div>
+            <div class="field">
+              <label for="level">المستوى الحالي</label>
+              <select id="level" name="level">
+                <option value="">اختاروا المستوى</option>
+                <option>مبتدئ</option>
+                <option>متوسط</option>
+                <option>جيد</option>
+                <option>غير متأكدين</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="goal">بماذا يحتاج الطالب المساعدة؟</label>
+              <select id="goal" name="goal">
+                <option value="">اختاروا الهدف الأساسي</option>
+                <option>المحادثة والثقة بالكلام</option>
+                <option>القراءة</option>
+                <option>الفهم</option>
+                <option>القواعد</option>
+                <option>التحضير للمدرسة أو الامتحانات</option>
+                <option>عدة مجالات معًا</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">ملاحظات إضافية</label>
+              <textarea id="message" name="message" maxlength="2000" placeholder="يمكنكم كتابة أي شيء مهم تحبون أن نعرفه عن الطالب..."></textarea>
+            </div>
+          </div>
+
+          <button id="submitBtn" type="submit">إرسال التفاصيل</button>
+          <div class="error" id="errorMsg">حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.</div>
+          <p class="privacy">سيتم استخدام التفاصيل فقط للتواصل بخصوص الدروس.</p>
+        </form>
+      </div>
+    </section>
+    <footer>دروس اللغة العبرية للأطفال والطلاب</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = "https://brjifapdfrwvvsvfdkkb.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_d42BwaZpPVFTgcI9vynE7A_ldS1ZOQw";
+
+    const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+    const form = document.getElementById("leadForm");
+    const button = document.getElementById("submitBtn");
+    const errorMsg = document.getElementById("errorMsg");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      errorMsg.style.display = "none";
+      button.disabled = true;
+      button.textContent = "جارٍ الإرسال...";
+
+      const data = new FormData(form);
+      const payload = {
+        parent_name: data.get("parent_name")?.trim(),
+        phone: data.get("phone")?.trim(),
+        email: data.get("email")?.trim() || null,
+        student_name: data.get("student_name")?.trim() || null,
+        grade: data.get("grade")?.trim() || null,
+        level: data.get("level") || null,
+        goal: data.get("goal") || null,
+        message: data.get("message")?.trim() || null
+      };
+
+      try {
+        const { error } = await db.from("parent_inquiries").insert([payload]);
+        if (error) throw error;
+
+        window.location.href = "thank-you.html";
+      } catch (error) {
+        console.error("Submission error:", error);
+        errorMsg.style.display = "block";
+        button.disabled = false;
+        button.textContent = "إرسال التفاصيل";
+      }
+    });
+  </script>
+</body>
+</html>
